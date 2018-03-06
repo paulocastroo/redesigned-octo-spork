@@ -1,0 +1,1672 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Angular - Introduction of Honcho Mango Development</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    .mdl-dialog--wide {
+      width: 364px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Angular - Introduction of Honcho Mango Development</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+        </div>
+          </div>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="demo-crumbs mdl-color-text--grey-500">
+              Honcho Mango &gt; Angular &gt; Tutorials
+            </div>
+            <!-- paste content here -->
+            <h3>Part 1: Creating the app</h3>
+
+<p>1. Generate the app using angular/cli</p>
+
+<p><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">honcho</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">mango</span>
+</pre></div></p>
+
+
+<p>2. cd into the directory & serve the app</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">serve</span>
+</pre></div>
+
+
+<h3>Part 2: Angular development</h3>
+
+<p>3. Open the project to an editor and edit app.component.ts</p>
+
+<p>4. Change the code</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">title</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;app&#39;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+to
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">title</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;honcho mango&#39;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+<p>·        Notice that the browser automatically reloads on every saved changes</p>
+
+<h3>Part 3: Modules & Components</h3>
+
+<p>5. Generate a module for ‘dashboard’</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">generate</span> <span style="color: #f8f8f2">module</span> <span style="color: #f8f8f2">dashboard</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">routing</span>
+</pre></div>
+
+
+<p>·        The --routing flag tells angular to also create a routing module alongside with the module itself. We did this as we know that this will be a module for the /dashboard URL and will be needing that routing</p>
+
+<p>6. Generate a component for ‘dashboard’</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">generate</span> <span style="color: #f8f8f2">component</span> <span style="color: #f8f8f2">dashboard</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">dashboard</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">flat</span>
+</pre></div>
+
+
+<p>·        The first dashboard on the command sets the module where the component will be "declared" as a part of </hr>its module while the latter dashboard will be the name of our component</p>
+
+<p>·        The --flat flag tells angular to not create a folder for the four files that will be created</p>
+
+<p>·        Delete the *.spec.ts that was generated as this is for automated testing and will not affect our app at this time</p>
+
+<h3>Part 4: Routing</h3>
+
+<p>7. Edit app.module.ts</p>
+
+<p>7.1. Import the router modules from angular</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">RouterModule,</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">from</span> <span style="color: #e6db74">&#39;@angular/router&#39;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+<p>7.2. Create a constant for routes</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">appRoutes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;dashboard&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">DashboardComponent</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span>
+</pre></div>
+
+
+<p>7.3. Add the RouterModule into the imports array on @NgModule with the parameters from appRoutes</p>
+
+
+
+<p>·        If you check the browser now and open the dev tools. You will see a log error that says component DashboardComponent is not part of any NgModule this is because DashboardComponent is declared in DashboardModule which is not known by our root module AppModule</p>
+
+     7.4. Add the DashboardModule into the imports of AppModule
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">BrowserModule,</span>
+
+  <span style="color: #f8f8f2">RouterModule</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">forRoot(appRoutes)</span>
+
+<span style="color: #f8f8f2">]</span>
+</pre></div>
+
+
+<p>·        If you check the browser again and go to localhost:4200/dashboard you will notice that it still displays the same view compared to localhost:4200. This is because angular doesn't know where to put the DashboardComponent in our html</p>
+
+<p>8. Edit app.component.html and add this line of code at the end of the file</p>
+
+<router-outlet></router-outlet>
+
+<p>·        "dashboard works" should now appear below our page on URL /dashboard and be removed on going back to URL /</p>
+
+<p>·        On the next part we will remove the html generated by angular/cli ang will be replacing that by our </hr>navbar component</p>
+
+<h3>Part 5: Structuring the app</h3>
+
+<p>9. Generate a module for ‘shared'</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">m</span> <span style="color: #f8f8f2">shared</span>
+</pre></div>
+
+
+<p>·        g is an alias for generate and m for module</p>
+
+<p>·        This is a module that will be "shared" throughout the whole application</p>
+
+<p>6. Generate a component for ‘navbar'</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">shared</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">components</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">navbar</span>
+</pre></div>
+
+
+<p>·        c is an alias for component</p>
+
+<p>·        shared is the module, components is the folder and navbar is the component that will be generated</p>
+
+<p>10. Place the element of NavbarComponent and replace everything above the</p>
+
+<router-outlet> element with it in app.component.html
+
+<app-navbar></app-navbar>
+
+<router-outlet></router-outlet>
+
+<p>·        app-navbar came from the selector key that can be found in navbar.component.ts</p>
+
+<p>·        Check the browser and it will display an error 'app-navbar' is not a known element: like the dashboardmodule sharedmodule needs to be imported also on the root module</p>
+
+<p>11. Add the SharedModule into the imports of AppModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">BrowserModule,</span>
+
+  <span style="color: #f8f8f2">RouterModule</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">forRoot(appRoutes),</span>
+
+  <span style="color: #f8f8f2">DashboardModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>·        Applying this alone still won't remove the error because we need to export the NavbarComponent for it to be available on other module that imports SharedModule</p>
+
+<p>12. Edit shared.module.ts</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule</span>
+
+<span style="color: #f8f8f2">],</span>
+
+<span style="color: #f8f8f2">exports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">NavbarComponent</span>
+
+<span style="color: #f8f8f2">],</span>
+
+<span style="color: #f8f8f2">declarations:</span> <span style="color: #f8f8f2">[NavbarComponent]</span>
+</pre></div>
+
+
+<h3>Part 6: RouterLinks</h3>
+
+<p>·        Navigating to /dashboard and back to / again is a very tedious task that's why we need routerLinks provided by angular</p>
+
+<p>13. Edit navbar.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Home</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/dashboard&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Dashboard</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f8f8f2">exports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">NavbarComponent</span>
+
+<span style="color: #f8f8f2">],</span>
+
+<span style="color: #f8f8f2">declarations:</span> <span style="color: #f8f8f2">[NavbarComponent]</span>
+</pre></div>
+
+
+<p>·        Going back to the browser and clicking this links does nothing because SharedModule (where NavbarComponent is declared) does not know what are these attributes</p>
+
+<p>14. Import RouterModule on  shared.module.ts</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">RouterModule,</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">from</span> <span style="color: #e6db74">&#39;@angular/router&#39;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+<p>·         Now clicking those links changes our location.pathname without reloading the page</p>
+
+<h3>Extras 1: Login</h3>
+
+<p>·        Create a module with routing Login</p>
+
+
+
+<p>·        Create a flat LoginComponent in LoginModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">m</span> <span style="color: #f8f8f2">login</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">routing</span>
+</pre></div>
+
+
+<p>·        Import LoginModule in AppModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">BrowserModule,</span>
+
+  <span style="color: #f8f8f2">RouterModule</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">forRoot(appRoutes),</span>
+
+  <span style="color: #f8f8f2">DashboardModule,</span>
+
+  <span style="color: #f8f8f2">LoginModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>·        Add login route in AppModule Routes</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">appRoutes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;dashboard&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">DashboardComponent</span>
+
+  <span style="color: #f8f8f2">},</span>
+
+  <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;login&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">LoginComponent</span> <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span>
+</pre></div>
+
+
+<p>·        Add the routerLink for login route in NavbarComponent</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Home</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/dashboard&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Dashboard</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/login&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Login</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<p>·        Commit everything</p>
+
+<h3>Part 8: Lazy loading</h3>
+
+<p>·        The imports inside app module starts piling up, while the user is in the dashboard URL the js for LoginModule is not need so we need to practice lazy loading</p>
+
+<p>15. Edit  dashboard-routing.module.ts and add this route</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">routes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">DashboardComponent</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span>
+</pre></div>
+
+
+<p>16. Do this also on login-routing.module.ts</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">routes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">LoginComponent</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span>
+</pre></div>
+
+
+<p>17. Create a routing module named</p>
+
+app-routing.module.ts for app.module.ts
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">NgModule</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">from</span> <span style="color: #e6db74">&#39;@angular/core&#39;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">RouterModule,</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">from</span> <span style="color: #e6db74">&#39;@angular/router&#39;</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">routes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;dashboard&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/dashboard/dashboard.module#DashboardModule&#39;</span>
+
+  <span style="color: #f8f8f2">},</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;login&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/login/login.module#LoginModule&#39;</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span>
+
+ 
+
+<span style="color: #a6e22e">@NgModule</span><span style="color: #f8f8f2">({</span>
+
+  <span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[RouterModule</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">forRoot(routes)],</span>
+
+  <span style="color: #f8f8f2">exports:</span> <span style="color: #f8f8f2">[RouterModule]</span>
+
+<span style="color: #f8f8f2">})</span>
+
+<span style="color: #f8f8f2">export</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">AppRoutingModule</span> <span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+
+<p>19. Import this to app.module.ts and delete previous routes, DashboardModule, LoginModule and unused imports</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">BrowserModule,</span>
+
+  <span style="color: #f8f8f2">AppRoutingModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>·        Check the browser and it will display an error Cannot find module 'app/dashboard/dashboard.module' we need to re run ng serve to fix this. Re running this will create a dashboard.module.chunk.js and login.module.chunk.js</p>
+
+<h3>Extras: 2</h3>
+
+<p>·        In honcho mango dashboard will also be our homepage we need to edit app-routing.module.ts to redirect / URL to /dashboard and add this to the route array</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">redirectTo:</span> <span style="color: #e6db74">&#39;/dashboard&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">pathMatch:</span> <span style="color: #e6db74">&#39;full&#39;</span>
+
+<span style="color: #f8f8f2">},</span>
+</pre></div>
+
+
+<p>·        redirectTo key tells angular to redirect the url to /dashboard when it fully matches (pathMatch: 'full') the path specified</p>
+
+<p>·        Delete the router link for home in navbar.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/dashboard&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Dashboard</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">routerLink</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;/login&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">Login</span><span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">a</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<h3>Part 9: Mock Server</h3>
+
+<p>·        Our dashboard will get its layout and content from a server</p>
+
+<p>·        Go to myjson.com</p>
+
+<p>·        Paste this json file and save</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span><span style="color: #f92672">&quot;tiles&quot;</span><span style="color: #f8f8f2">:[{</span><span style="color: #f92672">&quot;name&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;payment-success&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;col&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;row&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">},{</span><span style="color: #f92672">&quot;name&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;bank&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;col&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;row&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;cta&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;/bank&quot;</span><span style="color: #f8f8f2">},{</span><span style="color: #f92672">&quot;name&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;trademark&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;col&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;row&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;cta&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;https://abn.dev-t-syd.honcho.be/&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;redirect&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">},{</span><span style="color: #f92672">&quot;name&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;insurance&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;col&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;row&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;cta&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;https://www.abn.com.au/register&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">&quot;redirect&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #66d9ef">false</span><span style="color: #f8f8f2">}]}</span>
+</pre></div>
+
+
+<p>·        We'll individually obtain an endpoint that will serve this json file</p>
+
+<h3>Part 10: Http Requests</h3>
+
+<p>20. Generate a module 'core'</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">m</span> <span style="color: #f8f8f2">core</span>
+</pre></div>
+
+
+<p>21. Generate a service 'ContentProvider'</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">s</span> <span style="color: #f8f8f2">core</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">services</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">contentProvider</span>
+</pre></div>
+
+
+<p>·        S is an alias for service</p>
+
+<p>22. Import CoreModule to AppModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">BrowserModule,</span>
+
+  <span style="color: #f8f8f2">AppRoutingModule,</span>
+
+  <span style="color: #f8f8f2">CoreModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>23. Import HttpClientModule to CoreModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">HttpClientModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>·        Like RoutingModule angular provides us HttpClientModule that will handles our api requests'</p>
+
+<p>24. Edit the content-provider.service.ts</p>
+
+    <p>24.1. Inject http client</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">constructor(</span>
+
+  <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_http:</span> <span style="color: #f8f8f2">HttpClient</span>
+
+<span style="color: #f8f8f2">){</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+    <p>24.2. Create a function for requesting the json in our mock server</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">getContentByEndpoint(endpoint:</span> <span style="color: #f8f8f2">string):</span> <span style="color: #f8f8f2">Observable</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">any</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_http</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">get(endpoint);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        The semicolons are for type hinting</p>
+
+<p>·        :string tells that this function will accept a parameter of type string</p>
+
+<p>·        :Observable<any> tells that the function will return a value that has a type of observable</p>
+
+<p>·        <any> syntax is a generic</p>
+
+<p>25. Edit dashboard.component.ts to use our ContentProviderService</p>
+
+    <p>25.1 Inject ContentProviderService</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">constructor(</span>
+
+    <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_contentProvider:</span> <span style="color: #f8f8f2">ContentProviderService</span>
+
+<span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{}</span>
+</pre></div>
+
+
+
+<p>·        An error shown StaticInjectorError(AppModule)[DashboardComponent -> ContentProviderService] the reason for this is we need to set ContentProviderService as a provider</p>
+
+<p>26. Edit core.module.ts and add ContentProviderService inside providers array</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">HttpClientModule</span>
+
+<span style="color: #f8f8f2">],</span>
+
+<span style="color: #f8f8f2">declarations:</span> <span style="color: #f8f8f2">[],</span>
+
+<span style="color: #f8f8f2">providers:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">ContentProviderService</span>
+
+<span style="color: #f8f8f2">]</span>
+</pre></div>
+
+
+<p>27. Edit the ngOnInit() function inside dashboard.component.ts and use the contentProviderService and pass your mock endpoint as a parameter</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ngOnInit()</span> <span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_contentProvider</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">getContentByEndpoint(</span><span style="color: #e6db74">&#39;https://api.myjson.com/bins/f2b21&#39;</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">subscribe(</span>
+
+    <span style="color: #f8f8f2">(dashboardContent)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
+
+      <span style="color: #f8f8f2">console</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">log(dashboardContent);</span>
+
+    <span style="color: #f8f8f2">}</span>
+
+  <span style="color: #f8f8f2">);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Re run ng serve again on editing providers</p>
+
+<p>·        Check the dev tools console on the browser and it should have log the json from our mock server</p>
+
+<p>·        ngOnInit() function is a life cycle hook</p>
+
+<h3>Part 11: Child Component</h3>
+
+<p>27.  Generate another component for our dashboard tiles</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">dashboard</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">components</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">tile</span>
+</pre></div>
+
+
+<p>28.  Edit dashboard.component.html and use the tile component</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<p>·        No exports are required to use TileComponent inside DashboardComponent because they are both declared in the same module (DashboardModule)</p>
+
+<p>·        TileComponent is now the child of DashboardComponent</p>
+
+<h3>Part 12: Interfaces</h3>
+
+<p>29.  Create an interface that will be use to typeHint our dashboardContent data from our mock server</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">i</span> <span style="color: #f8f8f2">dashboard</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">intefaces</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">dashboardContent</span>
+</pre></div>
+
+
+<p>·        i is an alias for interface</p>
+
+<p>30. Edit DashboardContent</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">TileContent</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">from</span> <span style="color: #e6db74">&#39;../classes/tile-content&#39;</span><span style="color: #f8f8f2">;</span>
+
+ 
+
+<span style="color: #f8f8f2">export</span> <span style="color: #f8f8f2">interface</span> <span style="color: #f8f8f2">DashboardContent</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">readonly</span> <span style="color: #f8f8f2">tiles:</span> <span style="color: #f8f8f2">Array</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TileContent</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        readonly syntax forbids modifying the value after the object was created</p>
+
+<p>·        :Array<TileContent> tells that the property tiles of dashboard content is an array of TileContent class</p>
+
+<h3>Part 13: Classes</h3>
+
+<p>31.  Create a class that will be use to typeHint the tiles array inside dashboardContent data from our mock server</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">cl</span> <span style="color: #f8f8f2">dashboard</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">classes</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">tileContent</span>
+</pre></div>
+
+
+<p>·        cl is an alias for class</p>
+
+<p>32.  Edit TileContentClass and add these properties</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">export</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TileContent</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">constructor(</span>
+
+    <span style="color: #f8f8f2">readonly</span> <span style="color: #f8f8f2">name:</span> <span style="color: #f8f8f2">string,</span>
+
+    <span style="color: #f8f8f2">readonly</span> <span style="color: #f8f8f2">col:</span> <span style="color: #f8f8f2">number,</span>
+
+    <span style="color: #f8f8f2">readonly</span> <span style="color: #f8f8f2">row:</span> <span style="color: #f8f8f2">number,</span>
+
+    <span style="color: #f8f8f2">readonly</span> <span style="color: #f8f8f2">cta</span><span style="color: #960050; background-color: #1e0010">?</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">string,</span>
+
+    <span style="color: #f8f8f2">readonly</span> <span style="color: #f8f8f2">redirect</span><span style="color: #960050; background-color: #1e0010">?</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">boolean</span>
+
+  <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        This syntax is a shortcut to</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">export</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TileContent</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #a6e22e">readonly</span> <span style="color: #a6e22e">name</span>: <span style="color: #66d9ef">string</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #a6e22e">readonly</span> <span style="color: #a6e22e">col</span>: <span style="color: #66d9ef">number</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #a6e22e">readonly</span> <span style="color: #a6e22e">row</span>: <span style="color: #66d9ef">number</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #a6e22e">readonly</span> <span style="color: #a6e22e">cta?</span>: <span style="color: #66d9ef">string</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #a6e22e">readonly</span> <span style="color: #a6e22e">redirect?</span>: <span style="color: #66d9ef">boolean</span><span style="color: #f8f8f2">;</span>
+
+ 
+
+  <span style="color: #66d9ef">constructor</span><span style="color: #f8f8f2">(</span>
+
+    <span style="color: #a6e22e">name</span>: <span style="color: #66d9ef">string</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #a6e22e">col</span>: <span style="color: #66d9ef">number</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #a6e22e">row</span>: <span style="color: #66d9ef">number</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #a6e22e">cta?</span>: <span style="color: #66d9ef">string</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #a6e22e">redirect?</span>: <span style="color: #66d9ef">boolean</span>
+
+  <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">name</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">name</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">col</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">col</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">row</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">row</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">cta</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">cta</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">redirect</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">redirect</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        readonly syntax forbids editing the value of this class after it was instantiated</p>
+
+<h3>Extras: 3</h3>
+
+<p>·        Edit dashboard.component.ts to use DashboardContent class</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">ngOnInit() {</span>
+
+  <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">_contentProvider</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">getContentByEndpoint</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;https://api.myjson.com/bins/f2b21&#39;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">subscribe</span><span style="color: #f8f8f2">(</span>
+
+    <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">dashboardContent</span>: <span style="color: #66d9ef">DashboardContent</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
+
+      <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">dashboardContent</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">}</span>
+
+  <span style="color: #f8f8f2">);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<h3>Part 14: Data Binding</h3>
+
+<p>27. Create a property jsonContent in dashboard.component.ts and assign the subscribe dashboardContent to it</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">export</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">DashboardComponent</span> <span style="color: #66d9ef">implements</span> <span style="color: #a6e22e">OnInit</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #a6e22e">jsonContent</span>: <span style="color: #66d9ef">DashboardContent</span><span style="color: #f8f8f2">;</span>
+
+ 
+
+  <span style="color: #66d9ef">constructor</span><span style="color: #f8f8f2">(</span>
+
+    <span style="color: #66d9ef">private</span> <span style="color: #a6e22e">_contentProvider</span>: <span style="color: #66d9ef">ContentProviderService</span>
+
+  <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">}</span>
+
+ 
+
+  <span style="color: #a6e22e">ngOnInit() {</span>
+
+    <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">_contentProvider</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">getContentByEndpoint</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;https://api.myjson.com/bins/f2b21&#39;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">subscribe</span><span style="color: #f8f8f2">(</span>
+
+      <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">dashboardContent</span>: <span style="color: #66d9ef">DashboardContent</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
+
+        <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">jsonContent</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">dashboardContent</span><span style="color: #f8f8f2">;</span>
+
+      <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">);</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>28. Edit dashboard.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #a6e22e">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f8f8f2">{{</span><span style="color: #a6e22e">jsonContent</span><span style="color: #f8f8f2">}}</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">/div&gt;</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">app</span><span style="color: #f92672">-</span><span style="color: #a6e22e">tile</span><span style="color: #f92672">&gt;&lt;</span><span style="color: #960050; background-color: #1e0010">/app-tile&gt;</span>
+</pre></div>
+
+
+<p>·        {{jsonContent}} is a syntax called interpolation</p>
+
+<p>·        This will display [object Object] in the browser</p>
+
+<h3>Part 15: Structural Directives</h3>
+
+<p>·        We need to loop through jsonContent.tiles</p>
+
+<p>29. Edit dashboard.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #a6e22e">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f8f8f2">{{</span><span style="color: #a6e22e">jsonContent</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">tiles</span><span style="color: #f8f8f2">}}</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">/div&gt;</span>
+</pre></div>
+
+
+<p>·        This will display an error Cannot read property 'tiles' of undefined because jsonContent.tiles is still undefined until it was updated from our http request</p>
+
+<p>30. Use the the structural directive *ngIf to only display this div when jsonContent and jsonContent.tiles is true</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #a6e22e">div</span> <span style="color: #f92672">*</span><span style="color: #a6e22e">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;jsonContent &amp;&amp; jsonContent.tiles&quot;</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f8f8f2">{{</span><span style="color: #a6e22e">jsonContent</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">tiles</span><span style="color: #f8f8f2">}}</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">/div&gt;</span>
+</pre></div>
+
+
+<p>31. Now we can loop through jsonContent.tiles using another structural directive *ngFor</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;div</span> <span style="color: #960050; background-color: #1e0010">*</span><span style="color: #a6e22e">ngIf=</span><span style="color: #e6db74">&quot;jsonContent &amp;&amp; jsonContent.tiles&quot;</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;ng</span><span style="color: #a6e22e">-container</span> <span style="color: #960050; background-color: #1e0010">*</span><span style="color: #a6e22e">ngFor=</span><span style="color: #e6db74">&quot;let tileContent of jsonContent.tiles&quot;</span><span style="color: #f92672">&gt;</span>
+
+    name: {{tileContent.name}}
+
+    <span style="color: #f92672">&lt;br&gt;</span> col: {{tileContent.col}}
+
+    <span style="color: #f92672">&lt;br&gt;</span> row: {{tileContent.row}}
+
+    <span style="color: #f92672">&lt;br&gt;</span> cta: {{tileContent.cta}}
+
+    <span style="color: #f92672">&lt;br&gt;</span> redirect: {{tileContent.redirect}}
+
+    <span style="color: #f92672">&lt;br&gt;</span>
+
+    <span style="color: #f92672">&lt;br&gt;</span>
+
+  <span style="color: #960050; background-color: #1e0010">&lt;</span>/ng-container&gt;
+
+<span style="color: #f92672">&lt;/div&gt;</span>
+
+<span style="color: #f92672">&lt;app</span><span style="color: #a6e22e">-tile</span><span style="color: #f92672">&gt;</span><span style="color: #960050; background-color: #1e0010">&lt;</span>/app-tile&gt;
+</pre></div>
+
+
+<p>·        ng-container is an element by angular for containing directives that does not create a concrete container element</p>
+
+<h3>Part 16: Angular Material</h3>
+
+<p>32. Install angular material</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">npm</span> <span style="color: #f8f8f2">install</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">save</span> <span style="color: #a6e22e">@angular</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">material</span> <span style="color: #a6e22e">@angular</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">cdk</span>
+</pre></div>
+
+
+<p>32. Use angular material component grid-list</p>
+
+    <p>32.1 Import MatGridListModule on DashboardModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">DashboardRoutingModule,</span>
+
+  <span style="color: #f8f8f2">MatGridListModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+    <p>32.2 Import the angular pre-built themes in our styles.css</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">@import</span> <span style="color: #e6db74">&#39;~@angular/material/prebuilt-themes/indigo-pink.css&#39;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+    <p>32.3 Edit dashboard.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;jsonContent &amp;&amp; jsonContent.tiles&quot;</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">list</span> <span style="color: #f8f8f2">cols</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;10&quot;</span> <span style="color: #f8f8f2">rowHeight</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;400px&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngFor</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;let tile of jsonContent.tiles&quot;</span> <span style="color: #f8f8f2">[colspan]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tile.col&quot;</span> <span style="color: #f8f8f2">[rowspan]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tile.row&quot;</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f8f8f2">{{tile</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name}}</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">list</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<h3>Part 17: Input()</h3>
+
+<p>·        We have a tile component but is not yet doing anything. We will use this component to display their corresponding view base on the tileContent</p>
+
+<p>33. Edit tile.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">@Input</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">tileContent:</span> <span style="color: #f8f8f2">TileContent;</span>
+</pre></div>
+
+
+<p>·        Don't forget to import Input from '@angular/core'</p>
+
+<p>·        Now we can use this attribute to pass in the tileContent from our dashboard.component.html to our TileComponent</p>
+
+<p>34. Edit dashboard.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;jsonContent &amp;&amp; jsonContent.tiles&quot;</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">list</span> <span style="color: #f8f8f2">cols</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;10&quot;</span> <span style="color: #f8f8f2">rowHeight</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;400px&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngFor</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;let tileContent of jsonContent.tiles&quot;</span> <span style="color: #f8f8f2">[colspan]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.col&quot;</span> <span style="color: #f8f8f2">[rowspan]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.row&quot;</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span> <span style="color: #f8f8f2">[tileContent]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">list</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<p>34. Edit tile.component.html to print the tileContent.name instead of just "tile works!"</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">p</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f8f8f2">{{tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name}}</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">br</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">{{tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta}}</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">br</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">{{tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">redirect}}</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">p</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<h3>Extras: 4</h3>
+
+<p>·        Instead of creating a server to serve html files for the layout of our tiles we'll just create string that contains the html</p>
+
+<h3>Part 18: Pipes</h3>
+
+<p>35. Edit tile.component.ts</p>
+
+    <p>35.1 Create a property mockHtmlObject</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">mockHtmlObject:</span> <span style="color: #f8f8f2">{};</span>
+</pre></div>
+
+
+    <p>35.2 Instanstiate the value of mockHtmlObject on ngOnInit()</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ngOnInit()</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">mockHtmlObject</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #e6db74">&#39;payment-success&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&lt;h1&gt;This is an html for tile payment-success&lt;/h1&gt;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #e6db74">&#39;bank&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&lt;h1&gt;This is an html for tile bank&lt;/h1&gt;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #e6db74">&#39;trademark&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&lt;h1&gt;This is an html for tile trademark&lt;/h1&gt;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #e6db74">&#39;insurance&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&lt;h1&gt;This is an html for tile insurance&lt;/h1&gt;&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>36. Edit tile.component.html</p>
+
+<div>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #f8f8f2">{{mockHtmlObject[tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name]}}</span>
+</pre></div>
+
+
+</div>
+
+<p>·        Cheking the browser you will notice that h1 tags are not being rendered as an html element but rather a string. This is a security feature of angular</p>
+
+<p>·        We now need to bypass this security for the html to be rendered properly</p>
+
+<p>37. Generate a SafeEmbeddedElement pipe</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">p</span> <span style="color: #f8f8f2">shared</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pipes</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">safeEmbeddedElement</span>
+</pre></div>
+
+
+<p>·        p is an alias for pipe</p>
+
+<p>·        We put our reusable pipe in our SharedModule and not in CoreModule alongside with NavbarComponent to separate the global declarations to our providers.</p>
+
+<p>38. Edit safe-embedded-element.pipe.ts</p>
+
+<p>38.1 create a constructor with injected dependency of DomSanitizer</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">constructor(</span>
+
+    <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_domSanitizer:</span> <span style="color: #f8f8f2">DomSanitizer</span>
+
+<span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Don't forget to import DomSanitizer from '@angular/platform-browser'</p>
+
+<p>38.2 Edit the generated function transform</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">transform(embeddedElement):</span> <span style="color: #f8f8f2">SafeHtml</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_domSanitizer</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">bypassSecurityTrustHtml(embeddedElement);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Don't forget to import SafeHtml from '@angular/platform-browser' also</p>
+
+<p>39. Edit tile.component.html to use our pipe</p>
+
+<div>
+
+  <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{{mockHtmlObject[tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name]</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">safeEmbeddedElement}}</span>
+</pre></div>
+
+
+</div>
+
+<p>·        safeEmbeddedElement can be found on the name key of our pipe</p>
+
+<p>·        Using this will result to an error The pipe 'safeEmbeddedElement' could not be found this is because we didn't export the safeEmbeddedElement pipe to be available for other modules</p>
+
+<p>40. Export SafeEmbeddedElementPipe in our SharedModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">exports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">NavbarComponent,</span>
+
+  <span style="color: #f8f8f2">SafeEmbeddedElementPipe</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>·        Error is still there as DashboardModule where our tile.component.html lies does not know SharedModule</p>
+
+<p>41. Import SharedModule to DashboardModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">DashboardRoutingModule,</span>
+
+  <span style="color: #f8f8f2">MatGridListModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span>
+</pre></div>
+
+
+<p>·        Error is now gone but our view not output</p>
+
+ <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #e6db74">&quot;SafeValue must use [property]=binding&quot;</span>
+</pre></div>
+
+
+<p>39. Edit tile.component.html to use property binding in displaying the string html and then piped it with our safeEmbeddedElement pipe</p>
+
+<div [innerHtml]="mockHtmlObject[tileContent.name] | safeEmbeddedElement"></div>
+
+<p>·        Now everything will work as expected</p>
+
+<p>·        [innerHtml] is ang</p>
+
+<h3>Part 19: Event binding</h3>
+
+<p>35. Edit dashboard.component.ts</p>
+
+<p>35.1 Inject the Router from '@angular/router'</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">constructor(</span>
+
+  <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_contentProvider:</span> <span style="color: #f8f8f2">ContentProviderService,</span>
+
+  <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_changeDetectorRef:</span> <span style="color: #f8f8f2">ChangeDetectorRef,</span>
+
+  <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_router:</span> <span style="color: #f8f8f2">Router</span>
+
+<span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>35.2 create a new function tileAction()</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">tileAction(tileContent:</span> <span style="color: #f8f8f2">TileContent):</span> <span style="color: #f8f8f2">void</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(typeof</span> <span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta</span> <span style="color: #f92672">===</span> <span style="color: #e6db74">&#39;string&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">startsWith(</span><span style="color: #e6db74">&#39;http&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">redirect)</span> <span style="color: #f8f8f2">{</span>
+
+      <span style="color: #f8f8f2">location</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">href</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta;</span>
+
+      <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_router</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">navigate([</span><span style="color: #e6db74">`/${tileContent.name}`</span><span style="color: #f8f8f2">])</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">then()</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">catch();</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>36. Edit dashboard.component.html and add a new attribute of (click) to mat-grid-tile with the value of our tileAction() function and passed in parameter of tileContent</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;jsonContent &amp;&amp; jsonContent.tiles&quot;</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">list</span> <span style="color: #f8f8f2">cols</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;10&quot;</span> <span style="color: #f8f8f2">rowHeight</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;400px&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngFor</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;let tileContent of jsonContent.tiles&quot;</span> <span style="color: #f8f8f2">[colspan]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.col&quot;</span> <span style="color: #f8f8f2">[rowspan]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.row&quot;</span> <span style="color: #f8f8f2">(click)</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileAction(tileContent)&quot;</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span> <span style="color: #f8f8f2">[tileContent]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tile</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">mat</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">grid</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">list</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<p>·        Clicking the trademark tile now redirects the url to the same url in the json file</p>
+
+<p>·        We now need to create a feature page for bank, trademark and insurance</p>
+
+<h3>Extras: 5</h3>
+
+
+<p>·        Generate a module with routing for bank, trademark and insurance</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">m</span> <span style="color: #f8f8f2">bank</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">routing</span>
+
+<span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">m</span> <span style="color: #f8f8f2">trademark</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">routing</span>
+
+<span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">m</span> <span style="color: #f8f8f2">insurance</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">routing</span>
+</pre></div>
+
+
+<p>·        Generate a corresponding flat component for each of them</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">bank</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">bank</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">flat</span>
+<span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">trademark</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">trademark</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">flat</span>
+<span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">insurance</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">insurance</span> <span style="color: #f92672">--</span><span style="color: #f8f8f2">flat</span>
+</pre></div>
+
+
+<p>·        Modify each of their routingModule</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">routes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">BankComponent</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span> <span style="color: #f92672">//</span><span style="color: #f8f8f2">bank</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">routing</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span>
+</pre></div>
+
+
+ 
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">const</span> <span style="color: #f8f8f2">routes:</span> <span style="color: #f8f8f2">Routes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">InsuranceComponent</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span> <span style="color: #f92672">//</span><span style="color: #f8f8f2">insurance</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">routing</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span>
+</pre></div>
+
+
+
+ <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;bank&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/bank/bank.moduleaconst routes: Routes = [</span>
+
+  <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+
+    <span style="color: #f8f8f2">component:</span> <span style="color: #f8f8f2">TrademarkComponent</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">];</span> <span style="color: #f92672">//</span><span style="color: #f8f8f2">trademark</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">routing</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span><span style="color: #75715e">#BankModule&#39;</span>
+
+<span style="color: #f8f8f2">},</span>
+
+<span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;insurance&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/insurance/insurance.module#InsuranceModule&#39;</span>
+
+<span style="color: #f8f8f2">},</span>
+
+<span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;trademark&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/trademark/trademark.module#TrademarkModule&#39;</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+
+
+<p>·        Implement lazy loading module for each route, edit app-routing.module.ts Routes and add these routes</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;bank&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/bank/bank.module#BankModule&#39;</span>
+
+<span style="color: #f8f8f2">},</span>
+
+<span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;insurance&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/insurance/insurance.module#InsuranceModule&#39;</span>
+
+<span style="color: #f8f8f2">},</span>
+
+<span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">path:</span> <span style="color: #e6db74">&#39;trademark&#39;</span><span style="color: #f8f8f2">,</span>
+
+  <span style="color: #f8f8f2">loadChildren:</span> <span style="color: #e6db74">&#39;app/trademark/trademark.module#TrademarkModule&#39;</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Now clicking on bank and insurance tile will navigate the user to their corresponding feature pages</p>
+
+<p>·        Clicking on payment-success does nothing because it doesn't have a cta (call to action) on our served json</p>
+
+ 
+
+<h3>Part 20: More optimization</h3>
+
+<p>·        Navigating to a feature page and going back to dashboard always triggers the http request to get our DashboardContent json. We can improve this by saving the result of the request to the state of the app</p>
+
+<p>37. Edit content-provider.service.ts</p>
+
+    <p>37.1 Add two properties</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">content</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[];</span>
+
+<span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">contentObs:</span> <span style="color: #f8f8f2">Observable</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">any</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+    <p>37.2 Import two modules from rxjs</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #e6db74">&#39;rxjs/add/observable/of&#39;</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #e6db74">&#39;rxjs/add/operator/map&#39;</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+
+    <p>37.3 Modify function getContentByEndpoint()</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">getContentByEndpoint(endpoint:</span> <span style="color: #f8f8f2">string):</span> <span style="color: #f8f8f2">Observable</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">any</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">content[endpoint])</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">Observable</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">of(this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">content[endpoint]);</span>
+
+  <span style="color: #f8f8f2">}</span>
+
+  <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">contentObs</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_http</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">get(endpoint)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">map(response</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">contentObs</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">null;</span>
+
+    <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">content[endpoint]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">response;</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">response;</span>
+
+  <span style="color: #f8f8f2">});</span>
+
+  <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">contentObs;</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        The first if checks if the content by this endpoint is already existing if true, return the value as an Observable using the rxjs of so we can still subscribe into it</p>
+
+<p>·        The latter part of the function is to make an http request</hr></p>
+
+<p>·        You can now check that navigating through our app immediately show the content on the dashboard unless the page was reloaded, closed or a redirection happens</p>
+
+<h3>Extras: 6</h3>
+
+
+<p>·        The product insurance has a cta that starts with http but the redirect was set to false, the goal when these conditions were met is to render that website inside our app</p>
+
+<p>·        Generate a component that will be used in our feature pages to render either their respective html or the website in their cta</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">shared</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">components</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pageContent</span>
+</pre></div>
+
+
+<p>·        Modify page-content.component.ts and add these  two property</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">@Input</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">productModuleName:</span> <span style="color: #f8f8f2">string;</span>
+
+<span style="color: #f8f8f2">tileContent:</span> <span style="color: #f8f8f2">TileContent;</span>
+
+<span style="color: #f8f8f2">showIframe:</span> <span style="color: #f8f8f2">boolean</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">false;</span>
+</pre></div>
+
+
+<p>·        Inject ContentProviderService</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">constructor(</span>
+
+  <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_contentProvider:</span> <span style="color: #f8f8f2">ContentProviderService</span>
+
+<span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·         Modify the ngOnit() of page-content.component.ts</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ngOnInit()</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_contentProvider</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">getContentByEndpoint(</span><span style="color: #e6db74">&#39;https://api.myjson.com/bins/f2b21&#39;</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">subscribe(</span>
+
+    <span style="color: #f8f8f2">(dashboardContent:</span> <span style="color: #f8f8f2">DashboardContent)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
+
+      <span style="color: #f8f8f2">dashboardContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">tiles</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">forEach((value:</span> <span style="color: #f8f8f2">TileContent)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(value</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name</span> <span style="color: #f92672">===</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">productModuleName)</span> <span style="color: #f8f8f2">{</span>
+
+          <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">tileContent</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">value;</span>
+
+        <span style="color: #f8f8f2">}</span>
+
+      <span style="color: #f8f8f2">});</span>
+
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(typeof</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta</span> <span style="color: #f92672">===</span> <span style="color: #e6db74">&#39;string&#39;</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">startsWith(</span><span style="color: #e6db74">&#39;http&#39;</span><span style="color: #f8f8f2">))</span> <span style="color: #f8f8f2">{</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">redirect)</span> <span style="color: #f8f8f2">{</span>
+
+          <span style="color: #f8f8f2">location</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">href</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cta;</span>
+
+          <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">showIframe</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">true;</span>
+
+      <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">}</span>
+
+  <span style="color: #f8f8f2">);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Edit page-content.component.html and add these codes</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">container</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;!showIframe; else showIframeBlock&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">p</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f8f8f2">content</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">{{tileContent</span> <span style="color: #960050; background-color: #1e0010">?</span> <span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name</span> <span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">}}</span> <span style="color: #f8f8f2">works</span><span style="color: #960050; background-color: #1e0010">!</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">p</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">container</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">template</span> <span style="color: #75715e">#showIframeBlock&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;display: block;position: absolute;height: 100%;width: 100%;&quot;</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">iframe</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;overflow: hidden;height: 100%;width: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;&quot;</span> <span style="color: #f8f8f2">[src]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.cta | safeEmbeddedUrl&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">iframe</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">template</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<p>·        Notice the else syntax for the *ngIf directive it is pointing to the ng-template with a reference syntax of #showIframeBlock</p>
+
+<p>·        Edit bank.component.html, trademark.component.html and insurance.component.html to use the PageContentComponent and passed in the productModuleName as a parameter</p>
+
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span> <span style="color: #f8f8f2">productModuleName</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;bank&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">!</span><span style="color: #f92672">--</span> <span style="color: #f8f8f2">bank</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">component</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">html</span> <span style="color: #f92672">--&gt;</span>
+</pre></div>
+
+ 
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span> <span style="color: #f8f8f2">productModuleName</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;insurance&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">!</span><span style="color: #f92672">--</span> <span style="color: #f8f8f2">insurance</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">component</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">html</span> <span style="color: #f92672">--&gt;</span>
+</pre></div>
+
+
+
+ 
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span> <span style="color: #f8f8f2">productModuleName</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;trademark&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">!</span><span style="color: #f92672">--</span> <span style="color: #f8f8f2">trademark</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">component</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">html</span> <span style="color: #f92672">--&gt;</span>
+</pre></div>
+
+
+
+<p>·        The above syntax can also be written as</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span> <span style="color: #f8f8f2">[productModuleName]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;&#39;bank&#39;&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">page</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">content</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">!</span><span style="color: #f92672">--</span> <span style="color: #f8f8f2">bank</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">component</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">html</span> <span style="color: #f92672">--&gt;</span>
+</pre></div>
+
+
+<p>·         Import also the SharedModule to BankModule, TrademarkModule and InsuranceModule and export the PageContentComponent in our SharedeModule for us to use PageContentComponent</p>
+
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">BankRoutingModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span> <span style="color: #f92672">//</span> <span style="color: #f8f8f2">bank</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span>
+</pre></div>
+
+ 
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">InsuranceRoutingModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span> <span style="color: #f92672">//</span> <span style="color: #f8f8f2">insurance</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span>
+</pre></div>
+
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">imports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">CommonModule,</span>
+
+  <span style="color: #f8f8f2">TrademarkRoutingModule,</span>
+
+  <span style="color: #f8f8f2">SharedModule</span>
+
+<span style="color: #f8f8f2">],</span> <span style="color: #f92672">//</span> <span style="color: #f8f8f2">trademark</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span>
+</pre></div>
+
+ <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">exports:</span> <span style="color: #f8f8f2">[</span>
+
+  <span style="color: #f8f8f2">NavbarComponent,</span>
+
+  <span style="color: #f8f8f2">SafeEmbeddedElementPipe,</span>
+
+  <span style="color: #f8f8f2">PageContentComponent</span>
+
+<span style="color: #f8f8f2">],</span> <span style="color: #f92672">//</span> <span style="color: #f8f8f2">shared</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">module</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ts</span>
+</pre></div> 
+
+<p>·        Navigating to bank URL works but insurance URL logs an error unsafe value used in a resource URL because we are trying to use an unsafe url in our iframe. To fix this we must pipe this url as safe like what we did on embedding html</p>
+
+<p>·        Generate a pipe SafeEmbeddedUrlPipe</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">ng</span> <span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">p</span> <span style="color: #f8f8f2">shared</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pipes</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">safeEmbeddedUrl</span>
+</pre></div>
+
+
+<p>·        Edit safe-embedded-url.pipe.ts and inject the DomSanitizer</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">constructor(</span>
+
+  <span style="color: #f8f8f2">private</span> <span style="color: #f8f8f2">_domSanitizer:</span> <span style="color: #f8f8f2">DomSanitizer</span>
+
+<span style="color: #f8f8f2">){</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Edit the transform function of SafeEmbeddedUrlPipe</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">transform(url):</span> <span style="color: #f8f8f2">SafeResourceUrl</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">_domSanitizer</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">bypassSecurityTrustResourceUrl(url);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+
+<p>·        Don't forget to import SafeResourceUrl from '@angular/platform-browser'</p>
+
+<p>·        Modify the iframe in our page-content.component.ts</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">iframe</span> <span style="color: #f8f8f2">class</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;full-iframe&quot;</span> <span style="color: #f8f8f2">[src]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.cta | safeEmbeddedUrl&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">iframe</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<p>·        Reloading the page show the content works for a while, we need to add an *ngIf to only show page content after the request to the server for the json file is finished </p>
+
+<p>·        Add a property to page.-content.component.ts</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">contentLoaded:</span> <span style="color: #f8f8f2">boolean</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">false;</span>
+</pre></div>
+
+
+<p>·        Set it to true at the end of our subscribe function</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">this</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">contentLoaded</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">true;</span>
+</pre></div>
+
+
+<p>·        Use the contentLoaded flag in our page-content.component.html</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">container</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;contentLoaded&quot;</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">container</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">ngIf</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;!showIframe; else showIframeBlock&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">p</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f8f8f2">content</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">{{tileContent</span> <span style="color: #960050; background-color: #1e0010">?</span> <span style="color: #f8f8f2">tileContent</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name</span> <span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">}}</span> <span style="color: #f8f8f2">works</span><span style="color: #960050; background-color: #1e0010">!</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">p</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">container</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">template</span> <span style="color: #75715e">#showIframeBlock&gt;</span>
+
+    <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">div</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;display: block;position: absolute;height: 100%;width: 100%;&quot;</span><span style="color: #f92672">&gt;</span>
+
+      <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">iframe</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;overflow: hidden;height: 100%;width: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;&quot;</span> <span style="color: #f8f8f2">[src]</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;tileContent.cta | safeEmbeddedUrl&quot;</span><span style="color: #f92672">&gt;&lt;/</span><span style="color: #f8f8f2">iframe</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">div</span><span style="color: #f92672">&gt;</span>
+
+  <span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">template</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;/</span><span style="color: #f8f8f2">ng</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">container</span><span style="color: #f92672">&gt;</span>
+</pre></div>
+
+
+<h3>Part 21: Output()</h3>
+
+<p>·        Showing our iframe results in a double scrollbar</p>
+
+          </div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <dialog class="mdl-dialog mdl-dialog--wide">
+      <h4 class="mdl-dialog__title">Coming Soon...</h4>
+      <div class="mdl-dialog__content">
+        <p>
+          <video width="320" height="240" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+        </p>
+      </div>
+      <div class="mdl-dialog__actions">
+        <button type="button" class="mdl-button">Agree</button>
+        <button type="button" class="mdl-button close">Disagree</button>
+      </div>
+    </dialog>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script>
+      var dialog = document.querySelector('dialog');
+      var showDialogButton = document.querySelector('#view-source');
+      if (! dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+      }
+      showDialogButton.addEventListener('click', function() {
+        dialog.showModal();
+      });
+      dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>
